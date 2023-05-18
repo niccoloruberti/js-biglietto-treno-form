@@ -6,11 +6,95 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>biglietto treno form</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script defer type="text/javascript" src="./js/script.js"></script>
     </head>
     <body>
-        <input type="text" name="km" id="km" value="" placeholder="km">
-        <input type="text" name="age" id="age" value="" placeholder="age">
-        <button type="submit" id="submit">Genera</button>
+        <div class="container-fluid bg-danger w-100">
+            <!-- sezione inserimento dati -->
+            <div class="section w-100 pb-3">
+                <h2 class="text-white text-uppercase text-center py-3">calcola il prezzo del tuo biglietto</h2>
+                <div class="container p-5 bg-white rounded mb-3">
+                    <!-- riga input -->
+                    <div class="row my-3 d-flex justify-content-around">
+                        <div class="col-4">
+                            <label class="form-label">Nome Cognome</label>
+                            <input class="w-100" type="text" name="fullName" id="fullName" placeholder="Nome Cognome">
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label">Km da percorrere</label>
+                            <input class="w-100" type="text" name="km" id="km" value="" placeholder="km">
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label">Età</label>
+                            <input class="w-100" type="text" name="age" id="age" value="" placeholder="età">
+                        </div>
+                    </div>
+                    <!-- riga bottoni -->
+                    <div class="row">
+                        <div class="col-6 offset-3 d-flex justify-content-center">
+                            <button class="mx-3" type="submit" id="submit">Genera</button>
+                            <button class="mx-3" type="submit" id="delete">Annulla</button>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sezione biglietto -->
+            <div class="section w-100 pb-3">
+                <h2 class="text-white text-uppercase text-center py-3">il tuo biglietto</h2>
+                <div class="container bg-white">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mt-3 content">
+                                <h3 class="fs-6 text-uppercase w-100">dettaglio passeggeri</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- nome passeggero -->
+                        <div class="col-4">
+                            <div class="content bg-secondary d-flex flex-column align-items-center pt-2 mb-2">
+                                <h5 class="text-uppercase">nome passeggero</h5>
+                                <span class="pb-5" id="passeggero"></span>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="content border-top border-bottom">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <!-- offerta -->
+                                        <div class="content">
+                                            <h6>Offerta</h6>
+                                            <span id="offerta" class="pt-5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- carrozza -->
+                                        <div class="content">
+                                            <h6>Carrozza</h6>
+                                            <span id="carrozza" class="pt-5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="content">
+                                            <!-- codice cp -->
+                                            <h6>Codice CP</h6>
+                                            <span id="cp" class="pt-5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="content">
+                                            <!-- costo biglietto -->
+                                            <h6>Costo biglietto</h6>
+                                            <span id="costoBiglietto" class="pt-5"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
