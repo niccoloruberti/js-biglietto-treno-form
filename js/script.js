@@ -1,3 +1,5 @@
+"use strict";
+
 //dichiaro le variabili
 let km;
 let age;
@@ -40,19 +42,20 @@ genera.addEventListener('click', function() {
             costoBiglietto = (km * tariffaKm);
             document.getElementById('offerta').innerHTML = `Biglietto Standard`
         }
+        //scrivo il costo della tratta sul bliglietto
+        costoBiglietto = costoBiglietto.toFixed(2)
+        document.getElementById('costoBiglietto').innerHTML = `${costoBiglietto}€`;
+        //scrivo il nome del passeggero sul biglietto
+        passeggero = document.getElementById('fullName').value;
+        document.getElementById('passeggero').innerHTML = `${passeggero}`;
+        //scrivo il numero della carrozza sul biglietto
+        carrozza = (Math.random() * 10 + 1).toFixed(0);
+        document.getElementById('carrozza').innerHTML = `${carrozza}`;
+        //scrivo il codice CP sul biglietto
+        cp = (Math.random() * 10000 + 1).toFixed(0);
+        document.getElementById('cp').innerHTML = `${cp}`;
     }
-    //scrivo il costo della tratta sul bliglietto
-    costoBiglietto = costoBiglietto.toFixed(2)
-    document.getElementById('costoBiglietto').innerHTML = `${costoBiglietto}€`;
-    //scrivo il nome del passeggero sul biglietto
-    passeggero = document.getElementById('fullName').value;
-    document.getElementById('passeggero').innerHTML = `${passeggero}`;
-    //scrivo il numero della carrozza sul biglietto
-    carrozza = (Math.random() * 10 + 1).toFixed(0);
-    document.getElementById('carrozza').innerHTML = `${carrozza}`;
-    //scrivo il codice CP sul biglietto
-    cp = (Math.random() * 10000 + 1).toFixed(0);
-    document.getElementById('cp').innerHTML = `${cp}`;
+
 })
 
 //bottono che ripulisce le caselle di testo dai dati inseriti
